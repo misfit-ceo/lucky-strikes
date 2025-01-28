@@ -3,9 +3,9 @@
 export default function Home() {
   return (
     <section className="text-center">
-      <h1 className="text-3xl font-bold mb-4">Welcome to MyBrand</h1>
+      <h1 className="text-3xl font-bold mb-4">Welcome to Misfit Poets</h1>
       <p className="text-gray-700 mb-6">
-        This is the homepage. Add your introduction or hero section here.
+       Unleash Your Writing Potential
       </p>
 
       <div className="flex justify-center space-x-4">
