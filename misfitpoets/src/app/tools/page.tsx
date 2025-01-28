@@ -1,18 +1,15 @@
+// src/app/tools/page.tsx
+
 export default function Tools() {
-    return (
-      <section>
-        <h1 className="text-3xl font-bold mb-4">Tools</h1>
-        <ul className="space-y-4">
-          <li>
-            <a href="/tools/ai-writer" className="text-blue-600 hover:underline">
-              AI Writer
-            </a>
-          </li>
-          <li>
-            More tools coming soon...
-          </li>
-        </ul>
-      </section>
-    );
-  }
-  
+  return (
+    <section>
+      <h1 className="text-2xl font-semibold mb-3">Tools</h1>
+      <p className="text-gray-700 mb-4">
+        Placeholder for your tools overview or listing.
+      </p>
+      <a href="/tools/ai-writer" className="btn">
+        AI Writer
+      </a>
+    </section>
+  );
+}

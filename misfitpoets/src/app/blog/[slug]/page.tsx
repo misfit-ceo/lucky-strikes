@@ -1,11 +1,19 @@
-export default function BlogPost({ params }: { params: { slug: string } }) {
-    return (
-      <section>
-        <h1 className="text-3xl font-bold mb-4">Blog Post: {params.slug.replace("-", " ")}</h1>
-        <p>
-          This is a placeholder for the blog post content. Replace this with your dynamic data.
-        </p>
-      </section>
-    );
-  }
-  
+// src/app/blog/[slug]/page.tsx
+interface BlogPostProps {
+  params: {
+    slug: string;
+  };
+}
+
+export default function BlogPost({ params }: BlogPostProps) {
+  return (
+    <section>
+      <h1 className="text-3xl font-semibold mb-3">
+        Blog Post: {params.slug.replace("-", " ")}
+      </h1>
+      <p className="text-gray-700">
+        This is a placeholder for the blog post with slug “{params.slug}”.
+      </p>
+    </section>
+  );
+}

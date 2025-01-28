@@ -1,21 +1,25 @@
+/* src/app/globals.css */
+
+/* 1. Tailwind base/imports */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* 2. Global Resets or Basic HTML Setup */
+html, body {
+  @apply bg-white text-gray-900 font-sans;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* 3. Example Classes (Reusable) */
+.btn {
+  @apply inline-block bg-blue-600 text-white py-2 px-4 rounded shadow 
+         transition-colors duration-200 hover:bg-blue-700;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.card {
+  @apply bg-gray-100 p-4 rounded shadow;
 }
+
+/* 4. Any Additional Custom Classes or Overwrites */

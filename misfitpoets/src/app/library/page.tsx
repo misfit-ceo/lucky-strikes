@@ -1,9 +1,11 @@
+// src/app/library/page.tsx
+
 export default function Library() {
     return (
       <section>
-        <h1 className="text-3xl font-bold mb-4">Poetry Library</h1>
-        <p>
-          Browse a curated collection of poetry. Discover inspiration, find new favorites, and connect with timeless works.
+        <h1 className="text-2xl font-semibold mb-3">Library</h1>
+        <p className="text-gray-700">
+          Placeholder for your library or listing of resources, poems, etc.
         </p>
       </section>
     );
