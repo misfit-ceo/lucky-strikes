@@ -1,21 +1,23 @@
-// src/app/library/layout.tsx
-import type { Metadata } from "next";
-import Header from "@/components/Header";  // Adjust path as needed
-import Footer from "@/components/Footer";  // Adjust path as needed
+// app/library/layout.tsx
+import React from "react";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Misfit Poets Library",
-  description: "Explore books, poetry, lyrics, and more.",
+  description: "Explore books, poetry, lyrics, etc.",
 };
 
-export default function LibraryLayout({ children }: { children: React.ReactNode }) {
+export default function LibraryLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <div className="bg-background text-textPrimary min-h-screen flex flex-col">
-      <Header />
-      <main className="container mx-auto px-6 py-8 flex-grow">
+    <div style={{ minHeight: "100vh", background: "#fff" }}>
+      {/* TODO: Insert a real header or Nav if you like */}
+      <main style={{ maxWidth: "800px", margin: "0 auto", padding: "1rem" }}>
         {children}
       </main>
-      <Footer />
+      {/* TODO: Insert a footer or brand styling */}
     </div>
   );
 }

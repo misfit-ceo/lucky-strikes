@@ -1,30 +1,33 @@
-// src/app/library/components/ResultsList.tsx
+// app/library/components/ResultsList.tsx
+"use client";
 
-interface LibraryResult {
-    title: string;
-    description: string;
-    source: string;
+import React from "react";
+
+interface Item {
+  id: string;
+  title: string;
+  source?: string;
+}
+
+interface ResultsListProps {
+  items: Item[];
+}
+
+export default function ResultsList({ items }: ResultsListProps) {
+  if (!items || items.length === 0) {
+    return <p>No results found.</p>;
   }
-  
-  interface ResultsListProps {
-    results: LibraryResult[];
-  }
-  
-  export default function ResultsList({ results }: ResultsListProps) {
-    if (!results || results.length === 0) {
-      return <p className="text-center text-grayAccent">No results found.</p>;
-    }
-  
-    return (
-      <div className="space-y-4">
-        {results.map((item, idx) => (
-          <div key={idx} className="panel-brand">
-            <h2 className="header-font text-xl mb-2">{item.title}</h2>
-            <p className="text-grayAccent">{item.description}</p>
-            <p className="text-sm text-gold mt-1">Source: {item.source}</p>
-          </div>
-        ))}
-      </div>
-    );
-  }
-  
+
+  return (
+    <ul>
+      {items.map((item) => (
+        <li key={item.id} className="mb-2">
+          <a href={`/library/${item.id}`} className="underline text-blue-600">
+            {item.title}
+          </a>
+          {item.source && <span className="text-sm ml-2">({item.source})</span>}
+        </li>
+      ))}
+    </ul>
+  );
+}

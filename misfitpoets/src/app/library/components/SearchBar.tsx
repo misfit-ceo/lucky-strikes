@@ -1,29 +1,44 @@
-// src/app/library/components/SearchBar.tsx
+// app/library/components/SearchBar.tsx
+"use client";
+
+import React, { useState, ChangeEvent, FormEvent } from "react";
 
 interface SearchBarProps {
-    searchTerm: string;
-    setSearchTerm: (term: string) => void;
-    onSearch: () => void;
-  }
-  
-  export default function SearchBar({ searchTerm, setSearchTerm, onSearch }: SearchBarProps) {
-    return (
-      <div className="text-center mb-6">
-        <input
-          type="text"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Search books, poetry, or lyrics..."
-          className="w-full max-w-lg px-4 py-2 border border-gray-300 rounded focus:outline-none"
-        />
-        <button
-          onClick={onSearch}
-          className="btn-brand ml-4" // Uses your gold brand button
-          disabled={!searchTerm.trim()}
-        >
-          Search
-        </button>
-      </div>
-    );
-  }
-  
+  onSearch: (query: string) => void;
+  placeholder?: string;
+  defaultValue?: string;
+}
+
+export default function SearchBar({
+  onSearch,
+  placeholder = "Search...",
+  defaultValue = "",
+}: SearchBarProps) {
+  const [query, setQuery] = useState(defaultValue);
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setQuery(e.target.value);
+  };
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    if (query.trim()) {
+      onSearch(query.trim());
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="flex gap-2 items-center">
+      <input
+        type="text"
+        value={query}
+        onChange={handleChange}
+        placeholder={placeholder}
+        className="border px-2 py-1"
+      />
+      <button type="submit" className="bg-blue-600 text-white px-3 py-1 rounded">
+        Search
+      </button>
+    </form>
+  );
+}

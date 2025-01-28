@@ -1,29 +1,39 @@
-// src/app/library/components/Filters.tsx
+// app/library/components/Filters.tsx
+"use client";
+
+import React from "react";
 
 interface FiltersProps {
-    apiFilters: { [key: string]: boolean };
-    setApiFilters: (filters: { [key: string]: boolean }) => void;
-  }
-  
-  export default function Filters({ apiFilters, setApiFilters }: FiltersProps) {
-    const handleToggle = (source: string) => {
-      setApiFilters({ ...apiFilters, [source]: !apiFilters[source] });
-    };
-  
-    return (
-      <div className="flex justify-center space-x-4 mb-6">
-        {Object.keys(apiFilters).map((source) => (
-          <label key={source} className="flex items-center space-x-2">
-            <input
-              type="checkbox"
-              checked={apiFilters[source]}
-              onChange={() => handleToggle(source)}
-              className="form-checkbox text-gold"
-            />
-            <span className="text-textPrimary capitalize">{source}</span>
-          </label>
-        ))}
-      </div>
-    );
-  }
-  
+  sources: string[]; // e.g. ["gutenberg", "googleBooks", "genius"]
+  selectedSources: string[];
+  setSelectedSources: (newSources: string[]) => void;
+}
+
+export default function Filters({
+  sources,
+  selectedSources,
+  setSelectedSources,
+}: FiltersProps) {
+  const handleToggle = (src: string) => {
+    if (selectedSources.includes(src)) {
+      setSelectedSources(selectedSources.filter((s) => s !== src));
+    } else {
+      setSelectedSources([...selectedSources, src]);
+    }
+  };
+
+  return (
+    <div className="flex gap-4">
+      {sources.map((src) => (
+        <label key={src} className="flex items-center gap-1">
+          <input
+            type="checkbox"
+            checked={selectedSources.includes(src)}
+            onChange={() => handleToggle(src)}
+          />
+          {src}
+        </label>
+      ))}
+    </div>
+  );
+}
