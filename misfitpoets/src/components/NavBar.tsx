@@ -1,4 +1,3 @@
-// src/components/NavBar.tsx
 "use client";
 
 import Link from "next/link";
@@ -38,11 +37,10 @@ export default function NavBar() {
               Library
             </Link>
           </li>
-          {/* Tools has a sub-menu or direct link to /tools */}
+          {/* Tools Submenu */}
           <li className="relative group">
             <span className="hover:opacity-80 cursor-pointer">Tools</span>
-            {/* Submenu on hover */}
-            <ul className="absolute hidden group-hover:block bg-white border mt-2 rounded shadow-md text-sm">
+            <ul className="absolute hidden group-hover:block bg-white border mt-2 rounded shadow-md text-sm min-w-[180px]">
               <li>
                 <Link
                   href="/tools/misfit-canvas"
@@ -65,6 +63,22 @@ export default function NavBar() {
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
                   Misfit Scribe
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/tools/misfit-spark"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Misfit Spark
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/tools/misfit-weave"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Misfit Weave
                 </Link>
               </li>
             </ul>
@@ -91,7 +105,7 @@ export default function NavBar() {
                 Library
               </Link>
             </li>
-            {/* Tools Sub-Links */}
+            {/* Tools sublinks: direct for mobile */}
             <li>
               <Link href="/tools/misfit-canvas" onClick={() => setIsOpen(false)}>
                 Misfit Canvas
@@ -105,6 +119,16 @@ export default function NavBar() {
             <li>
               <Link href="/tools/misfit-scribe" onClick={() => setIsOpen(false)}>
                 Misfit Scribe
+              </Link>
+            </li>
+            <li>
+              <Link href="/tools/misfit-spark" onClick={() => setIsOpen(false)}>
+                Misfit Spark
+              </Link>
+            </li>
+            <li>
+              <Link href="/tools/misfit-weave" onClick={() => setIsOpen(false)}>
+                Misfit Weave
               </Link>
             </li>
             <li>
