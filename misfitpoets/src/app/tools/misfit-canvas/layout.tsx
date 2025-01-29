@@ -1,4 +1,4 @@
-/ app/tools/misfit-canvas/layout.tsx
+// app/tools/misfit-canvas/layout.tsx
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
