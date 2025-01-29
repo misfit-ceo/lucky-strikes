@@ -1,39 +1,15 @@
 // src/components/Header.tsx
 "use client";
 
-import Link from "next/link";
+import React from "react";
 
 export default function Header() {
   return (
-    <header className="bg-gray-200 shadow">
-      <nav className="container mx-auto px-4 py-3 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold hover:opacity-80">
-          MyBrand
-        </Link>
-
-        <ul className="flex space-x-6 text-sm">
-          <li>
-            <Link href="/about" className="hover:opacity-80">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link href="/library" className="hover:opacity-80">
-              Library
-            </Link>
-          </li>
-          <li>
-            <Link href="/blog" className="hover:opacity-80">
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link href="/tools" className="hover:opacity-80">
-              Tools
-            </Link>
-          </li>
-        </ul>
-      </nav>
+    <header className="bg-white shadow p-4">
+      <h1 className="text-xl font-bold">Misfit Poets</h1>
+      <p className="text-sm text-gray-600">
+        Where raw authenticity meets a supportive creative community.
+      </p>
     </header>
   );
 }

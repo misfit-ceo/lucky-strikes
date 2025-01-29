@@ -14,12 +14,12 @@ html, body {
 
 /* 3. Example Classes (Reusable) */
 .btn {
-  @apply inline-block bg-blue-600 text-white py-2 px-4 rounded shadow 
-         transition-colors duration-200 hover:bg-blue-700;
+  @apply inline-block bg-blue-600 text-white py-2 px-4 rounded shadow transition-colors duration-200 hover:bg-blue-700;
 }
 
 .card {
   @apply bg-gray-100 p-4 rounded shadow;
 }
 
-/* 4. Any Additional Custom Classes or Overwrites */
+/* 4. Additional Custom Classes or Overwrites */
+/* Keep it empty or add brand overrides below if needed */
