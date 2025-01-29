@@ -8,7 +8,7 @@ export default function NavBar() {
 
   return (
     <nav className="w-full bg-white shadow-md px-4 py-2 flex items-center justify-between">
-      {/* Brand Logo/Home Link */}
+      {/* Brand / Home Link */}
       <div className="text-xl font-bold">
         <a href="/" className="hover:text-blue-600">
           Misfit Poets
@@ -26,7 +26,7 @@ export default function NavBar() {
         <a href="/community" className="text-gray-700 hover:text-blue-600">
           Community
         </a>
-        
+
         {/* Tools Dropdown */}
         <div className="relative">
           <button
@@ -46,7 +46,14 @@ export default function NavBar() {
                     Misfit Scribe
                   </a>
                 </li>
-                {/* Add other tools if needed */}
+                <li>
+                  <a
+                    href="/tools/misfit-flow"
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Misfit Flow
+                  </a>
+                </li>
               </ul>
             </div>
           )}
