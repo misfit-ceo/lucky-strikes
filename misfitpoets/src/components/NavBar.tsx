@@ -14,7 +14,7 @@ export default function NavBar() {
           Misfit Poets
         </Link>
 
-        {/* Hamburger for mobile */}
+        {/* Hamburger (mobile) */}
         <button
           className="block lg:hidden"
           onClick={() => setIsOpen(!isOpen)}
@@ -41,6 +41,14 @@ export default function NavBar() {
           <li className="relative group">
             <span className="hover:opacity-80 cursor-pointer">Tools</span>
             <ul className="absolute hidden group-hover:block bg-white border mt-2 rounded shadow-md text-sm min-w-[180px]">
+              <li>
+                <Link
+                  href="/tools"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Overview
+                </Link>
+              </li>
               <li>
                 <Link
                   href="/tools/misfit-canvas"
@@ -81,6 +89,14 @@ export default function NavBar() {
                   Misfit Weave
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/tools/misfit-vault"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Misfit Vault
+                </Link>
+              </li>
             </ul>
           </li>
           <li>
@@ -105,7 +121,12 @@ export default function NavBar() {
                 Library
               </Link>
             </li>
-            {/* Tools sublinks: direct for mobile */}
+            {/* Tools sublinks directly for mobile */}
+            <li>
+              <Link href="/tools" onClick={() => setIsOpen(false)}>
+                Tools Overview
+              </Link>
+            </li>
             <li>
               <Link href="/tools/misfit-canvas" onClick={() => setIsOpen(false)}>
                 Misfit Canvas
@@ -129,6 +150,11 @@ export default function NavBar() {
             <li>
               <Link href="/tools/misfit-weave" onClick={() => setIsOpen(false)}>
                 Misfit Weave
+              </Link>
+            </li>
+            <li>
+              <Link href="/tools/misfit-vault" onClick={() => setIsOpen(false)}>
+                Misfit Vault
               </Link>
             </li>
             <li>

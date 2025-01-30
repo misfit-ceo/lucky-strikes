@@ -1,4 +1,3 @@
-// src/components/ToolsSubNav.tsx
 "use client";
 
 import Link from "next/link";
@@ -35,6 +34,11 @@ export default function ToolsSubNav() {
         <li>
           <Link href="/tools/misfit-weave" className="hover:opacity-80">
             Weave
+          </Link>
+        </li>
+        <li>
+          <Link href="/tools/misfit-vault" className="hover:opacity-80">
+            Vault
           </Link>
         </li>
       </ul>
