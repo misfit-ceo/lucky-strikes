@@ -4,10 +4,10 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.misfitpoets</groupId>
-  <artifactId>flow-service</artifactId>
+  <artifactId>agent-match-service</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>flow-service</name>
-  <description>Misfit Poets - Flow Microservice (Task & Project Management)</description>
+  <name>agent-match-service</name>
+  <description>Misfit Poets - Agent Match Microservice</description>
 
   <properties>
     <java.version>17</java.version>
