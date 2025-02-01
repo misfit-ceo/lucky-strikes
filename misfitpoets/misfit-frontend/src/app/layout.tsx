@@ -1,15 +1,15 @@
-// layout.tsx
-// Location: misfitpoets/misfitpoets-frontend/src/app/layout.tsx
-import '../styles/globals.css';
+import './globals.css';
 import MainNavBar from '../components/MainNavBar';
 import Footer from '../components/Footer';
+import Head from 'next/head';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <title>MisfitPoets</title>
-      </head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <body>
         <MainNavBar />
         <main>{children}</main>

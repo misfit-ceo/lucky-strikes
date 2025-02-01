@@ -1,6 +1,4 @@
-// page.tsx
-// Location: misfitpoets/misfit-frontend/src/app/dashboard/page.tsx
-
+"use client";
 import React from 'react';
 import { useGetDashboardMetricsQuery } from '@/redux/api/dashboardApi';
 
@@ -29,7 +27,6 @@ export default function DashboardPage() {
       </header>
 
       <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Key Metrics Widget */}
         <div className="bg-white shadow rounded-lg p-6">
           <h2 className="text-2xl font-semibold mb-4">Key Metrics</h2>
           <div className="space-y-2">
@@ -48,7 +45,6 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        {/* Notifications Widget */}
         <div className="bg-white shadow rounded-lg p-6">
           <h2 className="text-2xl font-semibold mb-4">Notifications</h2>
           {metrics.notifications && metrics.notifications.length > 0 ? (

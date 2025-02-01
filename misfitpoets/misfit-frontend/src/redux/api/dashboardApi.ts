@@ -3,6 +3,7 @@
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
+// Set your backend URL via environment variable or fallback to localhost
 const baseUrl = process.env.NEXT_PUBLIC_DASHBOARD_URL || 'http://localhost:8100';
 
 export const dashboardApi = createApi({

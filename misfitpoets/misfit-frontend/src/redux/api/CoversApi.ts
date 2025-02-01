@@ -1,6 +1,4 @@
-// coversApi.ts
-// Location: misfitpoets/misfit-frontend/src/redux/api/coversApi.ts
-
+// src/redux/api/coversApi.ts
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 const baseUrl = process.env.NEXT_PUBLIC_COVERS_URL || 'http://localhost:8094';
@@ -19,10 +17,7 @@ export const coversApi = createApi({
     getCovers: builder.query<any, void>({
       query: () => '/api/covers',
     }),
-    getCoverById: builder.query<any, number>({
-      query: (id) => `/api/covers/${id}`,
-    }),
   }),
 });
 
-export const { useRequestCoverMutation, useGetCoversQuery, useGetCoverByIdQuery } = coversApi;
+export const { useRequestCoverMutation, useGetCoversQuery } = coversApi;
