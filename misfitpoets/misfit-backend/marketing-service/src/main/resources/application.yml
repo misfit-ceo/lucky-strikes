@@ -1,0 +1,16 @@
+# application.yml
+# Location: misfitpoets/misfitpoets-backend/marketing-service/src/main/resources/application.yml
+server:
+  port: 8096  # Ensure this port is unique among your microservices
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:marketingdb;DB_CLOSE_DELAY=-1
+    driverClassName: org.h2.Driver
+    username: sa
+    password: 
+  jpa:
+    hibernate:
+      ddl-auto: update
+  application:
+    name: marketing-service

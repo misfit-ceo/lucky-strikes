@@ -1,0 +1,8 @@
+# application.yml
+# Location: misfitpoets/misfitpoets-backend/scribe-service/src/main/resources/application.yml
+server:
+  port: 8090  # Ensure this port does not conflict with other microservices
+
+spring:
+  application:
+    name: scribe-service
