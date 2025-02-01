@@ -1,13 +1,14 @@
 <!-- pom.xml -->
-<!-- Location: misfitpoets/misfitpoets-backend/aggregator-service/pom.xml -->
+<!-- Location: misfitpoets/misfitpoets-backend/blog-service/pom.xml -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.misfitpoets</groupId>
-  <artifactId>aggregator-service</artifactId>
+  <artifactId>blog-service</artifactId>
   <version>1.0.0</version>
-  <name>Aggregator Service</name>
+  <name>Blog Service</name>
   
   <properties>
       <java.version>17</java.version>
@@ -37,13 +38,13 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
-    <!-- H2 Database for MVP/testing -->
+    <!-- H2 Database (in-memory for MVP/testing purposes) -->
     <dependency>
       <groupId>com.h2database</groupId>
       <artifactId>h2</artifactId>
       <scope>runtime</scope>
     </dependency>
-    <!-- Lombok for reducing boilerplate (optional but recommended) -->
+    <!-- Lombok for reducing boilerplate code (optional but recommended) -->
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>

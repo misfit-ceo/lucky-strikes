@@ -1,0 +1,16 @@
+# application.yml
+# Location: misfitpoets/misfitpoets-backend/aggregator-service/src/main/resources/application.yml
+server:
+  port: 8090  # Ensure this port is unique among your microservices
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:aggregatordb;DB_CLOSE_DELAY=-1
+    driverClassName: org.h2.Driver
+    username: sa
+    password: 
+  jpa:
+    hibernate:
+      ddl-auto: update
+  application:
+    name: aggregator-service
