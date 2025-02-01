@@ -1,6 +1,6 @@
 // page.tsx
 // Location: misfitpoets/misfitpoets-frontend/src/app/features/agent-match/page.tsx
-import { useGetAgentsQuery, useMatchAgentsMutation } from '../../../redux/api/agentMatchApi';
+import { useGetAgentsQuery, useMatchAgentsMutation } from '../../../redux/api/api/agentMatchApi';
 
 export default function AgentMatchPage() {
   const { data: agents, error } = useGetAgentsQuery();
